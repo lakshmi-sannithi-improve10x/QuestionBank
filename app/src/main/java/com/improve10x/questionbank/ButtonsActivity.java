@@ -11,7 +11,7 @@ public class ButtonsActivity extends AppCompatActivity {
       Button question1Btn;
       Button question2Btn;
       Button question3Btn;
-      Button question4Btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,7 +68,7 @@ public class ButtonsActivity extends AppCompatActivity {
 
     public void navigateToQuestionsActivityScreen(String question,String optionA,String optionB,String optionC,String optionD){
         Intent intent = new Intent(this,QuestionsActivity.class);
-            intent.putExtra("Question1",question);
+            intent.putExtra("Question",question);
             intent.putExtra("option1",optionA);
             intent.putExtra("option2",optionB);
             intent.putExtra("option3",optionC);

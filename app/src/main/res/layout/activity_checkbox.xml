@@ -5,37 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="20dp"
+    android:gravity="center|top"
     android:orientation="vertical"
-    tools:context=".ButtonsActivity">
+    tools:context=".CheckboxActivity">
 
-    <Button
-        android:id="@+id/question1_btn"
+    <TextView
+        android:id="@+id/question_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Question 1" />
+        android:text="TextView" />
 
-    <Button
-        android:id="@+id/question2_btn"
+    <CheckBox
+        android:id="@+id/optiona_cb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Question 2" />
+        android:layout_marginTop="20dp"
+        android:text="CheckBox" />
 
-    <Button
-        android:id="@+id/question3_btn"
+    <CheckBox
+        android:id="@+id/optionb_cb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Question 3" />
+        android:text="CheckBox" />
 
-    <Button
-        android:id="@+id/button2"
+    <CheckBox
+        android:id="@+id/optionc_cb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Question 4" />
+        android:text="CheckBox" />
 
-    <Button
-        android:id="@+id/button3"
+    <CheckBox
+        android:id="@+id/optiond_cb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Question 5" />
+        android:text="CheckBox" />
 
+    <Button
+        android:id="@+id/verify_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Verify" />
 </LinearLayout>

@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="20dp"
+    android:gravity="center|top"
     android:orientation="vertical"
     tools:context=".QuestionsActivity">
 
     <TextView
-        android:id="@+id/ques1_txt"
+        android:id="@+id/question_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView" />
@@ -20,27 +21,34 @@
         android:layout_height="wrap_content">
 
         <RadioButton
-            android:id="@+id/radio1_rb"
+            android:id="@+id/optiona_rb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/radio2_rb"
+            android:id="@+id/optionb_rb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/radio3_btn"
+            android:id="@+id/optionc_rb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/radio4_btn"
+            android:id="@+id/optiond_rb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RadioButton" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Verify" />
 </LinearLayout>
