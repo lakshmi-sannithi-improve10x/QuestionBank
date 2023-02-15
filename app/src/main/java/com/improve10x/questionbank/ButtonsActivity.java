@@ -42,9 +42,19 @@ public class ButtonsActivity extends AppCompatActivity {
     }
 
     private void handleNumberQuestion3Btn() {
+        numberQuestion3Btn.setOnClickListener(view -> {
+            String question ="What is the size of double data type in bytes ?";
+            String answer = "8";
+            navigateToNumberSelectQuestionActivity(question,answer);
+        });
     }
 
     private void handleNumberQuestion2Btn() {
+        numberQuestion2Btn.setOnClickListener(view -> {
+            String question ="What is the size of long data type in bytes ?";
+            String answer = "8";
+            navigateToNumberSelectQuestionActivity(question,answer);
+        });
     }
 
     private void handleNumberQuestion1Btn() {
