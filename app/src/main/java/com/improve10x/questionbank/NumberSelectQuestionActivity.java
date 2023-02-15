@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class NumberSelectQuestionActivity extends AppCompatActivity implements IQuestionActivity {
      TextView questionTxt;
@@ -21,22 +22,31 @@ public class NumberSelectQuestionActivity extends AppCompatActivity implements I
         initViews();
         getQuestionsData();
         displayData();
+        handleVerifyBtn();
     }
 
     @Override
     public void handleVerifyBtn() {
+        verifyBtn.setOnClickListener(view -> {
+            verifyAnswer();
+        });
 
     }
 
     @Override
     public void verifyAnswer() {
-
+        String selectedAnswer = getSelectedOption();
+        if (answer.equalsIgnoreCase(selectedAnswer)) {
+            Toast.makeText(this, "Correct Answer", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Wrong Answer", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
     public String getSelectedOption() {
-
-        return null;
+        int progress = answerSb.getProgress();
+        return progress + "";
     }
 
     @Override
