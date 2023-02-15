@@ -27,15 +27,69 @@
         android:text="Question 3" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/checkq1_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Question 4" />
+        android:text="Checkbox Q1" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/checkq2_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Question 5" />
+        android:text="Checkbox Q2" />
+
+    <Button
+        android:id="@+id/checkq3_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Checkbox Q3" />
+
+    <Button
+        android:id="@+id/trueorfalseq1_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="True or FalseQ1" />
+
+    <Button
+        android:id="@+id/trueorfalseq2_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="True or falseQ2" />
+
+    <Button
+        android:id="@+id/trueorfalseq3_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="True or falseQ3" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Number Question1" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Number Question2" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Number Question3" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
 
 </LinearLayout>

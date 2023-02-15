@@ -12,10 +12,19 @@
         android:theme="@style/Theme.QuestionBank"
         tools:targetApi="31">
         <activity
-            android:name=".CheckboxActivity"
+            android:name=".TextQuestionActivity"
             android:exported="false" />
         <activity
-            android:name=".QuestionsActivity"
+            android:name=".NumberSelectQuestionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TrueOrFalseQuestionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MultiSelectedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SingleSelectedActivity"
             android:exported="false" />
         <activity
             android:name=".ButtonsActivity"
@@ -28,7 +37,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>

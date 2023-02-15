@@ -7,7 +7,7 @@
     android:layout_margin="20dp"
     android:gravity="center|top"
     android:orientation="vertical"
-    tools:context=".MultiSelectedActivity">
+    tools:context=".TrueOrFalseQuestionActivity">
 
     <TextView
         android:id="@+id/question_txt"
@@ -15,35 +15,29 @@
         android:layout_height="wrap_content"
         android:text="TextView" />
 
-    <CheckBox
-        android:id="@+id/optiona_cb"
+    <RadioGroup
+        android:id="@+id/options_rg"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="CheckBox" />
+        android:layout_height="wrap_content">
 
-    <CheckBox
-        android:id="@+id/optionb_cb"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CheckBox" />
+        <RadioButton
+            android:id="@+id/true_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="True" />
 
-    <CheckBox
-        android:id="@+id/optionc_cb"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CheckBox" />
-
-    <CheckBox
-        android:id="@+id/optiond_cb"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CheckBox" />
+        <RadioButton
+            android:id="@+id/false_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="False" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/verify_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:text="Verify" />
+
 </LinearLayout>
