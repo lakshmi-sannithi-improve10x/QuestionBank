@@ -30,13 +30,13 @@ public class MultiSelectedActivity extends AppCompatActivity implements IQuestio
         inItViews();
         getQuestionsData();
         displayData();
-        VerifyBtn();
+        handleVerifyBtn();
     }
 
 
 
     @Override
-    public void VerifyBtn() {
+    public void handleVerifyBtn() {
         verifyBtn.setOnClickListener(view -> {
             verifyAnswer();
         });

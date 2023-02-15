@@ -10,19 +10,22 @@
     tools:context=".NumberSelectQuestionActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/question_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView" />
 
     <SeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/answer_sb"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="50dp"
+        android:max="10"
+        android:progress="3" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/verify_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"

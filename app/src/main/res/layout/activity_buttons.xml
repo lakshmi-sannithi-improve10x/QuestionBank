@@ -8,88 +8,106 @@
     android:orientation="vertical"
     tools:context=".ButtonsActivity">
 
-    <Button
-        android:id="@+id/question1_btn"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Question 1" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/question2_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Question 2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/question3_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Question 3" />
+            <Button
+                android:id="@+id/question1_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question 1" />
 
-    <Button
-        android:id="@+id/checkq1_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Checkbox Q1" />
+            <Button
+                android:id="@+id/question2_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question 2" />
 
-    <Button
-        android:id="@+id/checkq2_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Checkbox Q2" />
+            <Button
+                android:id="@+id/question3_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question 3" />
 
-    <Button
-        android:id="@+id/checkq3_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Checkbox Q3" />
+            <Button
+                android:id="@+id/checkq1_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Checkbox Q1" />
 
-    <Button
-        android:id="@+id/trueorfalseq1_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="True or FalseQ1" />
+            <Button
+                android:id="@+id/checkq2_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Checkbox Q2" />
 
-    <Button
-        android:id="@+id/trueorfalseq2_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="True or falseQ2" />
+            <Button
+                android:id="@+id/checkq3_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Checkbox Q3" />
 
-    <Button
-        android:id="@+id/trueorfalseq3_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="True or falseQ3" />
+            <Button
+                android:id="@+id/trueorfalseq1_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="True or FalseQ1" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Number Question1" />
+            <Button
+                android:id="@+id/trueorfalseq2_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="True or falseQ2" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Number Question2" />
+            <Button
+                android:id="@+id/trueorfalseq3_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="True or falseQ3" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Number Question3" />
+            <Button
+                android:id="@+id/numberquestion1_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Number Question1" />
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+            <Button
+                android:id="@+id/numberquestion2_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Number Question2" />
 
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+            <Button
+                android:id="@+id/numberquestion3_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Number Question3" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Text Question1" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Text Question2" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Text Question3" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

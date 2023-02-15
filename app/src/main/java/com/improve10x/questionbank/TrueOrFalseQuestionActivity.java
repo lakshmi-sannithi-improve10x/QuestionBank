@@ -11,59 +11,47 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class TrueOrFalseQuestionActivity extends AppCompatActivity implements IQuestionActivity {
-       TextView questionTxt;
-       RadioButton trueRb;
-       RadioButton falseRb;
-       Button verifyBtn;
-       RadioGroup optionsRg;
+    TextView questionTxt;
+    RadioButton trueRb;
+    RadioButton falseRb;
+    Button verifyBtn;
+    RadioGroup optionsRg;
+    String question;
+    String answer;
 
-       String question;
-       String answer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_true_or_false_question);
-        inItViews();
+        initViews();
         getQuestionsData();
         displayData();
-        VerifyBtn();
+        handleVerifyBtn();
     }
 
     @Override
-    public void VerifyBtn() {
+    public void handleVerifyBtn() {
         verifyBtn.setOnClickListener(view -> {
             verifyAnswer();
-
         });
-
     }
 
     @Override
     public void verifyAnswer() {
         String selectedAnswer = getSelectedOption();
-        if (answer.equals(selectedAnswer)){
+        if (answer.equalsIgnoreCase(selectedAnswer)) {
             Toast.makeText(this, "Correct Answer", Toast.LENGTH_SHORT).show();
-        }else {
+        } else {
             Toast.makeText(this, "Wrong Answer", Toast.LENGTH_SHORT).show();
         }
-
-
     }
 
     @Override
     public String getSelectedOption() {
-        int selectedOption = optionsRg.getCheckedRadioButtonId();
-        String result = "";
-        if (selectedOption == R.id.true_rb){
-            result = "a";
-
-        } else if (selectedOption == R.id.false_rb) {
-            result = "b";
-
-        }
-
-
-        return result;
+        int selectedId = optionsRg.getCheckedRadioButtonId();
+        RadioButton selectedOptionRb = findViewById(selectedId);
+        String text = selectedOptionRb.getText().toString();
+        return text;
     }
 
     @Override
@@ -71,17 +59,14 @@ public class TrueOrFalseQuestionActivity extends AppCompatActivity implements IQ
         Intent intent = getIntent();
         question = intent.getStringExtra("Question");
         answer = intent.getStringExtra("answer");
-
     }
 
     @Override
     public void displayData() {
         questionTxt.setText(question);
-
-
     }
 
-    public void inItViews(){
+    public void initViews() {
         questionTxt = findViewById(R.id.question_txt);
         trueRb = findViewById(R.id.true_rb);
         falseRb = findViewById(R.id.false_rb);

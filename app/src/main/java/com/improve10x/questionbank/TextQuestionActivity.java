@@ -13,7 +13,7 @@ public class TextQuestionActivity extends AppCompatActivity implements IQuestion
     }
 
     @Override
-    public void VerifyBtn() {
+    public void handleVerifyBtn() {
 
     }
 

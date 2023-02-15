@@ -33,14 +33,14 @@ public class SingleSelectedActivity extends AppCompatActivity implements IQuesti
         initViews();
         getQuestionsData();
         displayData();
-        VerifyBtn();
+        handleVerifyBtn();
 
     }
 
 
 
     @Override
-    public void VerifyBtn() {
+    public void handleVerifyBtn() {
         verifyBtn.setOnClickListener(view -> {
             verifyAnswer();
         });
