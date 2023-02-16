@@ -90,19 +90,19 @@
                 android:text="Number Question3" />
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/textq1_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Text Question1" />
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/textq2_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Text Question2" />
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/textq3_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Text Question3" />

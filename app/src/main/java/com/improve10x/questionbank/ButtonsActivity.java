@@ -20,6 +20,9 @@ public class ButtonsActivity extends AppCompatActivity {
     Button numberQuestion1Btn;
     Button numberQuestion2Btn;
     Button numberQuestion3Btn;
+    Button textQ1Btn;
+    Button textQ2Btn;
+    Button textQ3Btn;
 
 
     @Override
@@ -39,13 +42,41 @@ public class ButtonsActivity extends AppCompatActivity {
         handleNumberQuestion1Btn();
         handleNumberQuestion2Btn();
         handleNumberQuestion3Btn();
+        handleTextQ1Btn();
+        handleTextQ2Btn();
+        handleTextQ3Btn();
+    }
+
+    private void handleTextQ3Btn() {
+        textQ3Btn.setOnClickListener(view -> {
+            String question =" _____________ component is used to suppoer vertical Scrolling";
+            String answer = "Scrollview";
+            navigateToTextQuestionActivity(question,answer);
+        });
+
+    }
+
+    private void handleTextQ2Btn() {
+        textQ2Btn.setOnClickListener(view -> {
+            String question ="Android is an ________ ";
+            String answer = "Operating System";
+            navigateToTextQuestionActivity(question,answer);
+        });
+    }
+
+    private void handleTextQ1Btn() {
+        textQ1Btn.setOnClickListener(view -> {
+            String question =" Java ______ can contain variables and methods";
+            String answer = "Class";
+            navigateToTextQuestionActivity(question,answer);
+        });
     }
 
     private void handleNumberQuestion3Btn() {
         numberQuestion3Btn.setOnClickListener(view -> {
             String question ="What is the size of double data type in bytes ?";
             String answer = "8";
-            navigateToNumberSelectQuestionActivity(question,answer);
+            navigateToTextQuestionActivity(question,answer);
         });
     }
 
@@ -53,7 +84,7 @@ public class ButtonsActivity extends AppCompatActivity {
         numberQuestion2Btn.setOnClickListener(view -> {
             String question ="What is the size of long data type in bytes ?";
             String answer = "8";
-            navigateToNumberSelectQuestionActivity(question,answer);
+            navigateToTextQuestionActivity(question,answer);
         });
     }
 
@@ -61,7 +92,7 @@ public class ButtonsActivity extends AppCompatActivity {
         numberQuestion1Btn.setOnClickListener(view -> {
           String question ="What is the size of  int  data type in bytes ?";
           String answer = "4";
-          navigateToNumberSelectQuestionActivity(question,answer);
+          navigateToTextQuestionActivity(question,answer);
         });
     }
 
@@ -176,6 +207,9 @@ public class ButtonsActivity extends AppCompatActivity {
         numberQuestion1Btn = findViewById(R.id.numberquestion1_btn);
         numberQuestion2Btn = findViewById(R.id.numberquestion2_btn);
         numberQuestion3Btn = findViewById(R.id.numberquestion3_btn);
+        textQ1Btn = findViewById(R.id.textq1_btn);
+        textQ2Btn = findViewById(R.id.textq2_btn);
+        textQ3Btn = findViewById(R.id.textq3_btn);
     }
 
     public void navigateToQuestionsActivityScreen(String question, String optionA, String optionB, String optionC, String optionD, String answer) {
@@ -212,6 +246,13 @@ public class ButtonsActivity extends AppCompatActivity {
         numberQuestionIntent.putExtra("Question", question);
         numberQuestionIntent.putExtra("answer", answer);
         startActivity(numberQuestionIntent);
+    }
+
+    public void  navigateToTextQuestionActivity(String question,String answer){
+        Intent textQuestionIntent = new Intent(this, TextQuestionActivity.class);
+        textQuestionIntent.putExtra("Question", question);
+        textQuestionIntent.putExtra("answer", answer);
+        startActivity(textQuestionIntent);
     }
 }
 
