@@ -23,6 +23,9 @@ public class ButtonsActivity extends AppCompatActivity {
     Button textQ1Btn;
     Button textQ2Btn;
     Button textQ3Btn;
+    Button spinnerQ1Btn;
+    Button spinnerQ2Btn;
+    Button spinnerQ3Btn;
 
 
     @Override
@@ -45,13 +48,57 @@ public class ButtonsActivity extends AppCompatActivity {
         handleTextQ1Btn();
         handleTextQ2Btn();
         handleTextQ3Btn();
+        handleSpinnerQ1Btn();
+        handleSpinnerQ2Btn();
+        handleSpinnerQ3Btn();
+    }
+
+    private void handleSpinnerQ3Btn() {
+        spinnerQ3Btn.setOnClickListener(view -> {
+            String question = " Find the value of A[1] after execution of the following program.\n" +
+                    "\n" +
+                    "int[] A = {0,2,4,1,3};\n" +
+                    "for(int i = 0; i < a.length; i++){\n" +
+                    "    a[i] = a[(a[i] + 3) % a.length];\n" +
+                    "}";
+            String[] options = {"0","1","2","3"};
+            String answer = "1";
+            navigateToSpinnerQuestionsActivity(question,options,answer);
+        });
+    }
+
+    private void handleSpinnerQ2Btn() {
+        spinnerQ2Btn.setOnClickListener(view -> {
+            String question = " public class Solution{\n" +
+                    "       public static void main(String[] args){\n" +
+                    "                     byte x = 127;\n" +
+                    "                     x++;\n" +
+                    "                     x++;\n" +
+                    "                     System.out.print(x);\n" +
+                    "       }\n" +
+                    "}";
+            String[] options ={"-127","127","129","2"};
+            String answer = "-127";
+            navigateToSpinnerQuestionsActivity(question,options,answer);
+        });
+
+    }
+
+    private void handleSpinnerQ1Btn() {
+        spinnerQ1Btn.setOnClickListener(view -> {
+            String question = " Number of primitive data types in Java are?";
+            String[] options = {"6","7","8","9"};
+            String answer = "8";
+            navigateToSpinnerQuestionsActivity(question,options,answer);
+        });
     }
 
     private void handleTextQ3Btn() {
         textQ3Btn.setOnClickListener(view -> {
             String question =" _____________ component is used to suppoer vertical Scrolling";
             String answer = "Scrollview";
-            navigateToTextQuestionActivity(question,answer);
+            String trimTxt = answer.trim();
+            navigateToTextQuestionActivity(question,trimTxt);
         });
 
     }
@@ -59,8 +106,9 @@ public class ButtonsActivity extends AppCompatActivity {
     private void handleTextQ2Btn() {
         textQ2Btn.setOnClickListener(view -> {
             String question ="Android is an ________ ";
-            String answer = "Operating System";
-            navigateToTextQuestionActivity(question,answer);
+            String answer = "Operating System  ";
+            String trimTxt = answer.trim();
+            navigateToTextQuestionActivity(question,trimTxt);
         });
     }
 
@@ -68,7 +116,8 @@ public class ButtonsActivity extends AppCompatActivity {
         textQ1Btn.setOnClickListener(view -> {
             String question =" Java ______ can contain variables and methods";
             String answer = "Class";
-            navigateToTextQuestionActivity(question,answer);
+            String trimTxt = answer.trim();
+            navigateToTextQuestionActivity(question,trimTxt);
         });
     }
 
@@ -122,19 +171,19 @@ public class ButtonsActivity extends AppCompatActivity {
 
     private void handleCheckQ3Btn() {
         checkQ3Btn.setOnClickListener(view -> {
-            String question = " Select activity lifecycle methods in Android";
+            String question = " Select activity lifecycle methods in Android ?";
             String optionA = "OnCreate";
             String optionB = "OnStop";
             String optionC = "OnPause";
             String optionD = "OnResume";
-            String answer = "bcd";
+            String answer = "abcd";
             navigateToCheckboxActivity(question, optionA, optionB, optionC, optionD, answer);
         });
     }
 
     private void handleCheckQ2Btn() {
         checkQ2Btn.setOnClickListener(view -> {
-            String question = "Select all the parts of a computer";
+            String question = "Select all the parts of a computer ?";
             String optionA = "Cat";
             String optionB = "Mouse";
             String optionC = "Monitor";
@@ -146,12 +195,12 @@ public class ButtonsActivity extends AppCompatActivity {
 
     private void handleCheckQ1Btn() {
         checkQ1Btn.setOnClickListener(view -> {
-            String question = "Which of the following are planets";
+            String question = "Which of the following are planets ?";
             String optionA = "Mercury";
             String optionB = "Sun";
             String optionC = "Jupiter";
             String optionD = "Saturn";
-            String answer = "abc";
+            String answer = "acd";
             navigateToCheckboxActivity(question, optionA, optionB, optionC, optionD, answer);
         });
     }
@@ -210,6 +259,9 @@ public class ButtonsActivity extends AppCompatActivity {
         textQ1Btn = findViewById(R.id.textq1_btn);
         textQ2Btn = findViewById(R.id.textq2_btn);
         textQ3Btn = findViewById(R.id.textq3_btn);
+        spinnerQ1Btn = findViewById(R.id.spinnerq1_btn);
+        spinnerQ2Btn = findViewById(R.id.spinnerq2_btn);
+        spinnerQ3Btn = findViewById(R.id.spinnerq3_btn);
     }
 
     public void navigateToQuestionsActivityScreen(String question, String optionA, String optionB, String optionC, String optionD, String answer) {
@@ -253,6 +305,14 @@ public class ButtonsActivity extends AppCompatActivity {
         textQuestionIntent.putExtra("Question", question);
         textQuestionIntent.putExtra("answer", answer);
         startActivity(textQuestionIntent);
+    }
+
+    public void navigateToSpinnerQuestionsActivity(String question,String[] options,String answer){
+        Intent spinnerQuestionsIntent = new Intent(this, SpinnerQuestionsActivity.class);
+        spinnerQuestionsIntent.putExtra("Question", question);
+        spinnerQuestionsIntent.putExtra("options",options);
+        spinnerQuestionsIntent.putExtra("answer",answer);
+        startActivity(spinnerQuestionsIntent);
     }
 }
 

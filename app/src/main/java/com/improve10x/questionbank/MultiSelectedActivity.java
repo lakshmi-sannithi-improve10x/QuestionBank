@@ -57,16 +57,25 @@ public class MultiSelectedActivity extends AppCompatActivity implements IQuestio
 
    @Override
    public String getSelectedOption(){
-        boolean checkMercury = optionACb.isChecked();
-        boolean checkSun = optionBCb.isChecked();
-        boolean checkJupiter = optionCCb.isChecked();
-        boolean checkSaturn = optionDCb.isChecked();
-        boolean result = false;
-        if (checkMercury == true && checkJupiter == true && checkSaturn == true && checkSun == false){
-              result = true;
+        String result = "";
+        if (optionACb.isChecked()){
+            result = result +"a";
+
         }
-        return result + "";
-    }
+        if (optionBCb.isChecked()) {
+            result = result + "b";
+
+        }
+        if (optionCCb.isChecked()) {
+            result = result + "c";
+
+        }
+        if (optionDCb.isChecked()) {
+            result = result + "d";
+
+        }
+        return result;
+   }
 
     public void inItViews(){
         questionTxt = findViewById(R.id.question_txt);

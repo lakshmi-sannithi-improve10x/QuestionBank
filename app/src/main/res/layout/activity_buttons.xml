@@ -107,6 +107,24 @@
                 android:layout_height="wrap_content"
                 android:text="Text Question3" />
 
+            <Button
+                android:id="@+id/spinnerq1_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spinner Q1" />
+
+            <Button
+                android:id="@+id/spinnerq2_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spinner Q2" />
+
+            <Button
+                android:id="@+id/spinnerq3_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spinner Q3" />
+
         </LinearLayout>
     </ScrollView>
 
